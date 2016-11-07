@@ -5,7 +5,7 @@
 ------------------------
 
 ## 项目计划表
-<table>
+<table class = "table table-condensed">
     <tr>
         <th rowspan = "2">任务</th>
         <th rowspan = "2">负责人</th>
