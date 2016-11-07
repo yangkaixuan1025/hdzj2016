@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <TITLE>登录页面</TITLE>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录页面</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/denglu.css" />
-    <SCRIPT src="js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
-    <SCRIPT type="text/javascript">
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
         $(function() {
             //得到焦点
             $("#password").focus(function() {
@@ -39,50 +40,44 @@
                 $("#right_hand").attr("style", "right:-112px;top:-12px");
             });
         });
-    </SCRIPT>
+    </script>
 
-    <META name="GENERATOR" content="MSHTML 11.00.9600.17496" />
+    <meta name="GENERATOR" content="MSHTML 11.00.9600.17496" />
 </head>
 
-<BODY>
-    <DIV class="top_div" style="width:100%;height:400px;"></DIV>
-    <DIV style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 290px; text-align: center;">
-        <form action="UserAction!login.action" method="post">
-            <DIV style="width: 165px; height: 96px; position: absolute;">
-                <DIV class="tou"></DIV>
-                <DIV class="initial_left_hand" id="left_hand"></DIV>
-                <DIV class="initial_right_hand" id="right_hand"></DIV>
-            </DIV>
-            <P style="padding: 30px 0px 10px; position: relative;">
-                <SPAN class="u_logo"></SPAN>
-                <INPUT class="ipt" type="text" placeholder="请输入用户名" name="UAccount" />
-            </P>
-            <P style="position: relative;">
-                <SPAN class="p_logo"></SPAN>
-                <INPUT class="ipt" id="password" type="password" placeholder="请输入密码" name="UPasswd" />
-            </P>
-            <!-- 加验证码的div -->
-            <DIV style="height: 50px;margin-top: 10px;  ">
-                加验证码
-            </DIV>
-            <!-- 加验证码的div -->
-            <DIV style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
-                <P style="margin: 0px 35px 20px 45px;">
-                    <SPAN style="float: left;">
-					<A style="color: rgb(204, 204, 204);" href="UserAction!zhaohui.action">忘记密码?</A>
-				</SPAN>
-                    <SPAN style="float: right;">
-			    	<A style="color: rgb(204, 204, 204); margin-right: 10px;" href="UserAction!zhuce.action">注册</A>
+<body>
+    <div class="top_div" style="width:100%;height:400px;"></div>
+    <div style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 290px; text-align: center;">
+        <form action="/login" method="post">
+            <div style="width: 165px; height: 96px; position: absolute;">
+                <div class="tou"></div>
+                <div class="initial_left_hand" id="left_hand"></div>
+                <div class="initial_right_hand" id="right_hand"></div>
+            </div>
+            <p style="padding: 30px 0px 10px; position: relative;">
+                <span class="u_logo"></span>
+                <input class="ipt" type="text" placeholder="请输入用户名" name="username" />
+            </p>
+            <p style="position: relative;">
+                <span class="p_logo"></span>
+                <input class="ipt" id="password" type="password" placeholder="请输入密码" name="password" />
+            </p>
+            <div style="background-color : #ffbd20; margin: 10px 30px; border-radius: 3px; font-size: larger; padding: 3px;" th:if="${param.error}">用户名或密码错</div>
+            <div style="background-color : #78c4e8; margin: 10px 30px; border-radius: 3px; font-size: larger; padding: 3px;" th:if="${param.logout}">您已注销成功</div>
+            <div style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
+                <p style="margin: 0px 35px 20px 45px;">
+                    <span style="float: left;">
+					<a style="color: rgb(204, 204, 204);" href="#">忘记密码?</a>
+				</span>
+                    <span style="float: right;">
+			    	<a style="color: rgb(204, 204, 204); margin-right: 10px;" href="#">注册</a>
                     <!--  <A style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; color: rgb(255, 255, 255); font-weight: bold;" href="#">登录</A>  -->
-			             <input style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152);border-image: none; color: rgb(255, 255, 255); font-weight: bold;"
-                                type="submit" value="登录"/>
-			    </SPAN>
-                </P>
-
-            </DIV>
+                        <input style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152);border-image: none; color: rgb(255, 255, 255); font-weight: bold;" type="submit" value="登录"/>
+			    </span>
+                </p>
+            </div>
         </form>
-    </DIV>
-
-</BODY>
+    </div>
+</body>
 
 </html>
