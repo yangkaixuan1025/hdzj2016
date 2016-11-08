@@ -1,8 +1,6 @@
 # hdzj_2016
-## 中晋实验室门户网站
+### 中晋实验室门户网站
 该Web项目基于 Spring Boot 并整合Spring MVC、Spring Security、Spring  Data(Hibernate)等框架进行开发构建。
-
-------------------------
 
 ## 项目计划表
 <table class = "table table-condensed">
@@ -20,7 +18,7 @@
         <td>项目立项</td>
         <td>lipengbiao</td>
         <td>-</td>
-        <td bgcolor=PowderBlue></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
         <td>-</td>
     </tr>
 </table>
